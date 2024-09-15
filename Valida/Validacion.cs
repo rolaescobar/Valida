@@ -11,11 +11,11 @@ namespace Valida
     {
        public static bool validarCorreo(string correo)
         {
-            //INVESTIGAR  EXPRESION REGULAR PARA VALIDAR CORREOS
-            //string patronCorreo = @"Expresion regular para validar correos";
-            //return Regex.IsMatch(correo, patronCorreo);
+           
+            string patronCorreo = @"^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$";
+            return Regex.IsMatch(correo, patronCorreo);
 
-            return true;
+           
         }
 
         public static bool validarNickname(string nickname) 
